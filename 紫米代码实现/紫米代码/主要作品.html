@@ -1,0 +1,107 @@
+<html>
+    <head>
+<style type="text/css">
+    @IMPORT url("./css/div.css");
+    body{
+    background:#EEE9EF;
+   }
+    .teaching-video{
+	background-color: #EEE9EF;
+	padding-top:50px;
+	padding-bottom:50px;
+}
+.teaching-video .tea-video-title{
+	margin:20px auto 50px;
+}
+.teaching-video .tea-video-title .tea-video-h1{
+	font-size:30px;
+	color:#ef7700;
+	height:50px;
+	line-height:50px;
+}
+.teaching-video .tea-video-title .tea-video-h3{
+	font-size:16px;
+	color:#666666;
+}
+.teaching-video .tea-video-cont{
+	margin-bottom:50px;
+}
+.teaching-video li{list-style: none;}
+.video{width:1200px;margin:0 auto;overflow: hidden;zoom:1;background:  #EEE9EF;}
+.video>div{float: left;height: 400px;}
+.video>div:first-child {width: 5%;background: url(../images/video-btn-l.png) center center no-repeat;}
+.video>div:last-child {width: 5%;background: url(../images/video-btn-r.png) center center no-repeat;}
+.video>div:nth-of-type(2){width: 90%;}
+.video ul{position: relative;}
+.video li{transition: all .6s; position: absolute;background: url(../images/video-bg.png) center center no-repeat;background-size: 100% 100%;}
+/*.video li>div{padding: 1% 1% 4%;}*/
+.video li video{width:100%;height:100%;}
+.video li h3{text-align: center;margin-top: 2px;color: #1766d7;}
+.video li:nth-of-type(1) video{background: url(img/zhanchangsha.jpg) no-repeat;background-size: cover;}
+.video li:nth-of-type(2) video{background: url(../images/video01.jpg) no-repeat;background-size: cover;}
+.video li:nth-of-type(3) video{background: url(../images/video02.jpg) no-repeat;background-size: cover;}
+.video li:nth-of-type(4) video{background: url(../images/video03.jpg) no-repeat;background-size: cover;}
+.video li:nth-of-type(5) video{background: url(../images/video01.jpg) no-repeat;background-size: cover;}
+.video1{width: 200px;height: 100px; top: 143px;left: 0; z-index: 1;}/*创建5个播放框初始位置类，可自行更改*/
+.video2{width: 400px;height: 200px; top: 86px;left: 90px; z-index: 2;}
+.video3{width: 700px;height: 350px; top: 0px;left: 190px; z-index: 3;}
+.video4{width: 400px;height: 200px; top: 86px;left: 590px; z-index: 2;}
+.video5{width: 200px;height: 100px; top: 143px;left: 880px; z-index: 1;}
+</style>
+</head>
+<body>
+    <div class="teaching-video">
+        <div class="tea-video-title">
+          <div class="tea-video-h1 text-center" style ="text-align: center"></div>
+        
+        </div>
+        <div class="tea-video-cont">
+                <div class="video">
+                    <div></div>
+                    <div>
+                    <ul>
+                        <li class="video1"><div><video preload="none" controls loop autoplay><source src="mp4/xiangmi.mp4"></source>您的浏览器不支持HTML5视频播放，请升级浏览器。</video><h3></h3></div></li>
+                        <li class="video2"><div><video preload="none" controls loop autoplay ><source src="mp4/qinaid.mp4"></source>您的浏览器不支持HTML5视频播放，请升级浏览器。</video><h3></h3></div></li>
+            
+                        <li class="video3"><div><video preload="none" controls loop autoplay><source src="mp4/zhanchagnsha.mp4"></source>您的浏览器不支持HTML5视频播放，请升级浏览器。</video><h3></h3></div></li>
+                        <li class="video4"><div><video preload="none" controls loop autoplay><source src="mp4/xinli.mp4"></source>您的浏览器不支持HTML5视频播放，请升级浏览器。</video><h3></h3></div></li>
+                        <li class="video5"><div><video preload="none" controls loop autoplay><source src="mp4/zhanchagnsha.mp4"></source>您的浏览器不支持HTML5视频播放，请升级浏览器。</video><h3></h3></div></li>
+                    </ul>
+                    </div>
+                    <div></div>
+                </div>
+         </div> 
+    </div>
+    </body>
+<script type="text/javascript">
+    $(function(){
+    var click=0;
+    var right=0;      //解决第一次右边点击没反应
+    $('.video>div:first-child').click(function(){    //当点击左边按钮
+    for(var i=0; i<5; i++){
+    document.getElementsByTagName('video')[i].pause();}
+    click+=1;
+    if(click>=6)click=1;
+    right=1;
+    $('.video li:nth-of-type('+(((click+0)<=5) ? (click+0) : (click+0-5))+')').attr('class','video5');
+    $('.video li:nth-of-type('+(((click+1)<=5) ? (click+1) : (click+1-5))+')').attr('class','video1');
+    $('.video li:nth-of-type('+(((click+2)<=5) ? (click+2) : (click+2-5))+')').attr('class','video2');
+    $('.video li:nth-of-type('+(((click+3)<=5) ? (click+3) : (click+3-5))+')').attr('class','video3');
+    $('.video li:nth-of-type('+(((click+4)<=5) ? (click+4) : (click+4-5))+')').attr('class','video4');
+    })
+    $('.video>div:last-child').click(function(){  //当点击右边按钮
+    for(var i=0; i<5; i++){
+    document.getElementsByTagName('video')[i].pause();}
+    click-=1;
+    if(click<=0)click=5;
+    if(!right)click=4;  //解决第一次右边点击没反应
+    right=1;
+    $('.video li:nth-of-type('+(((click+0)<=5) ? (click+0) : (click+0-5))+')').attr('class','video5');
+    $('.video li:nth-of-type('+(((click+1)<=5) ? (click+1) : (click+1-5))+')').attr('class','video1');
+    $('.video li:nth-of-type('+(((click+2)<=5) ? (click+2) : (click+2-5))+')').attr('class','video2');
+    $('.video li:nth-of-type('+(((click+3)<=5) ? (click+3) : (click+3-5))+')').attr('class','video3');
+    $('.video li:nth-of-type('+(((click+4)<=5) ? (click+4) : (click+4-5))+')').attr('class','video4');
+    })
+    })
+    </script>
+</html>

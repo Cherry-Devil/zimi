@@ -1,0 +1,277 @@
+/*清除内外边距*/
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;/*清除列表样式*/
+}
+body{
+	background-color: #f3f7f5;
+	/*height: 3000px;*/
+}
+button{
+	border: none;
+}
+a{
+	text-decoration: none;
+	
+}
+/*版心 1200 水平居中*/
+.w{
+	width: 1200px;
+	margin: auto;/*居中*/
+}
+.header{
+	/*width: 1200px;*/
+	height: 42px;
+	margin: 30px auto;/*上下30，左右居中*/
+
+}
+.down{
+	color:#00A4FF;
+	margin-left: 15px;
+}
+.header img {
+	height: 48px;
+}
+.logo{
+	float: left;
+}
+.search{
+	float: left;
+	margin-left: 70px;
+}
+.search input{
+	float: left;
+	width: 340px;
+	height: 38px;
+	border:1px solid #00a4ff;
+	padding-left: 20px;
+	color: #ccc;
+}
+.search button{
+	float: left;
+	width: 50px;
+	height: 40px;
+	background-color: #00a4ff;
+
+}
+.nav{
+	float: left;
+	margin-left: 60px; 
+}
+.nav ul li {
+	float: left;
+}
+.nav ul li a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 20px;
+	padding: 0 10px;
+	color: #050505;
+	text-decoration: none;
+	font-size: 18px;
+}
+.nav ul li a:hover{
+	border-bottom: 2px solid #00a4ff;
+}
+.user img {
+	height: 40px;
+	padding-left: 50px; 
+}
+.user{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	font-size: 14px;
+}
+/*banner开始*/
+.banner{
+	height: 420px;
+	background: #AFCAF5 url(img/杨紫3.jpg) no-repeat  center;
+}
+.subnav{
+	float: left;
+	width: 150px;
+	height: 420px;
+	background: rgba(0, 0, 0 ,.3); 
+	padding: 0px 20px;/*上下20*/
+
+}
+.subnav span {
+	float: right;
+}
+.subnav li 
+{
+	height: 45px;
+	line-height: 45px;
+	font-size: 18px;	
+}
+.subnav li a {
+	color: #fff;/*白色*/
+	text-decoration: none;/*取消下划线*/
+}
+.subnav li a:hover{
+	color: yellow;
+}
+
+.right1{
+	width: 228px;
+	height: 300px;
+	float: right;
+	margin-top: 50px;/*子盒子是浮动的就不会有外边距塌陷的情况*/
+	background-color: #f3f7f5;
+}
+.right1-hd{
+	height: 48px;
+	background-color: skyblue;
+	font-size: 18px;
+	line-height: 48px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+
+}
+.right1-bd{
+	
+	padding:0 15px;/*padding不会撑开盒子*/
+	padding-top: 10px;
+}
+.right1-bd li {   /*行高=高度只能让单行文本垂直居中*/
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+}
+.right1-bd li h4{
+	font-size: 14px;
+	color: #4e4e4e; 
+}
+.right1-bd li p {
+	font-size: 12px;
+	color: #a5a5a5;
+}
+.all{
+	display: block;
+	height: 38px;
+	border: 1px solid #00a4ff;
+	line-height: 38px;
+	text-align: center;
+	font-size: 16px;
+	color: #00a4ff;
+}
+.all:hover{
+	background-color: #00a4ff;
+	color: #fff;
+}
+/*3.goods开始*/
+.goods{
+	height: 60px;
+	background-color: #fff;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+	margin-top: 10px;
+	line-height: 60px;/*行高具有继承性 eg：font-、line-、text-、color*/
+}
+.goods h3{
+	float: left;
+	font-size: 16px;
+	color: #00a4ff;
+	margin-left: 30px;
+	margin-right: 20px;
+}
+.goods2 li
+{
+	/*display: block;*/
+	float: left;
+	/*height: 30px;*/
+	padding: 0 20px;
+	/*margin-left: 10px;*/
+	color: #ccc;
+}
+.goods li a{
+	padding-left: 40px;
+	color: #000;
+}
+.goods li a:hover{
+	color: #00A4FF;
+}
+.fix a {
+	color: #00A4FF;
+	float: right;
+	padding-right: 10px;
+}
+
+/*boxk开始*/
+.box{
+	margin-top: 15px;
+	/*background-color: pink;*/
+}
+.box-hd{
+	height: 60px;
+	line-height: 60px;
+
+}
+.box-hd h3{
+	float: left;
+	font-size: 20px;
+	color: #494949;
+	font-weight: 400;/*取消加粗*/
+}
+.box-hd a{
+	float: right;
+	font-size: 12px;
+	color: #a5a5a5;
+	margin-right: 30px;
+}
+.box-bd{
+	/*本盒子不可以给高度，行数不确定！！！*/
+	width: 1215px;
+
+}
+.box-bd li{
+	width: 228px;
+	height: 270px;
+	background-color: #000;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+
+}
+.box-bd li img{
+	width: 228px;
+	height: 270px;
+}
+.box-bd a:hover{
+	background: rgba(0, 0, 0 ,.3); 
+}
+/*footer开始*/
+.footer{
+	height: 150px;
+	background-color: #fff;
+	margin-top: 30px;
+}
+.foot li {
+	padding-right: 30px;
+	margin-top: 30px;
+	float: left;
+}
+.foot2 img{
+	float: right;
+	margin-top: 20px;
+}
+
+.clearfix:before,
+.clearfix:after{
+	content: "";
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+.clearfix:after{
+	*zoom: 1;
+}
+
+
+/*footer结束*/

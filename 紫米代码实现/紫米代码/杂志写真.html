@@ -1,0 +1,50 @@
+
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+   body{
+    background:#000000;
+   }
+   #box{
+    width: 900px;
+    height: 1200px;
+    border: 8px solid #FFFFFF;
+    padding: 0;
+    margin: 10px auto;
+    border-radius: 10px;
+    background: #000000;
+   }
+  </style>
+  <script>
+   window.onload=function(){
+    var box=document.getElementById('box');
+    var aImg=box.getElementsByTagName('img')[0];
+    var index=0;
+    var atrr=[];
+    atrr[0]='img/a.webp';
+    atrr[1]='img/b.webp';
+    atrr[2]='img/c.webp';
+    atrr[3]='img/d.webp';
+    atrr[4]='img/e.webp';
+    atrr[5]='img/f.webp';
+    atrr[6]='img/g.webp';
+    atrr[7]='img/h.webp';
+    atrr[8]='img/i.webp';
+    atrr[9]='img/j.webp';
+    setInterval(function(){
+     index++;
+     index>=atrr.length&&(index=0);
+     aImg.src=atrr[index];
+    },1000)
+   }
+  </script>
+ </head>
+ <body>
+  <div id="box">
+   <img src="img/a.webp" width="900" height="1200" />
+   <ul></ul>
+  </div>
+ </body>
+</html>

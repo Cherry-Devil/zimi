@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到米缸呀！</title>
+
+</head>
+
+<style>
+    textarea {
+        outline: none;
+        resize: none;
+    }
+    
+    #txt {
+        /* display: absolute;
+        top: 27%;
+        left: 50px; */
+        width: 400px;
+        height: 150px;
+        margin: 20px 95px;
+        margin-top: 65px;
+        border-radius: 5%;
+        border: none;
+        background-color: #F9D9D8;
+    }
+    
+    li {
+        display: block;
+        width: 400px;
+        height: 25px;
+        border-radius: 5%;
+        background-color: #EEAD47;
+        margin: 0px 60px;
+        margin-bottom: 18px;
+        text-align: center;
+    }
+    
+    #fu {
+        /* display: relative; */
+        width: 600px;
+        height: 10000px;
+        /* background-image: url(./img/米缸.png); */
+        background-color: #FAE49C;
+        margin:  auto;
+        border-radius: 5%;
+    }
+    #da{
+        background-image: url(./img/米缸.png);
+    }
+    
+    button {
+        margin-left: 450px;
+        height: 30px;
+        width: 50px;
+        /* display:; */
+    }
+ 
+</style>
+
+<body>
+    <div id ="da">
+        <div id="fu">
+            <!-- <input type="text" id="txt"> -->
+            <textarea name="" id="txt" cols="30" rows="10"></textarea>
+            <button id="btn">发表</button>
+            <ul id="ul1">
+                <!-- <li></li>
+                <li></li> -->
+            </ul>
+        </div >
+    </div>
+    
+
+
+    <!-- <div id = "migang">
+        <img src="./img/米缸.png" alt="">
+    </div> -->
+    <script>
+        var btn = document.getElementById('btn');
+        var txt = document.getElementById('txt');
+        var ul1 = document.getElementById('ul1');
+
+        btn.onclick = function() {
+            // var uls = document.getElementById("ul1");
+            // if (ul1.length <= 3) {
+            //     console.log(txt.value);
+            //     var a = txt.value;
+            //     var b = ul1.innerHTML;
+            //     // b = b + '<li>' + a + '</li>';
+            //     ul1.innerHTML = b + '<li>' + a + '</li>';
+            //     txt.value = "";
+            // } else {
+            //     uls.removeChild(0)
+            // }
+
+
+            console.log(txt.value);
+            var a = txt.value;
+            var b = ul1.innerHTML;
+            // b = b + '<li>' + a + '</li>';
+            ul1.innerHTML = b + '<li>' + a + '</li>';
+            txt.value = "";
+
+        }
+    </script>
+</body>
+
+</html>

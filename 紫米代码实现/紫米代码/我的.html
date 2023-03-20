@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>我的</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!-- 以下是按钮的js触发操作 -->
+		<script type="text/javascript">
+			function test(){
+			  var element = document.getElementById("test");
+			  element.setAttribute("name","test");
+		  }
+		  </script>
+	</head>
+	<style>
+
+.btn {
+    float:right;
+    /* background-color: #55cc66; */
+    margin-left: 50px;
+    padding: 5px;
+}
+	</style>
+	<body>
+		<!-- 大盒子 -->
+		<div class="box">
+			<div class="content">
+				<h3 class="title">个人信息</h3>
+				<div class="box-top">
+					<div class="bt-l">
+						<!-- 个人介绍 -->
+						<p>我喜欢杨紫是因为她自知平凡且努力自信。
+							小雪滤镜是有的，在记忆里真的不需抹去。她不是一般的女明星，她的身材样貌我不想要去吹嘘。
+							她和我们一样自知而且自卑，但同时又努力的自信着。比如，她进组就减肥，瘦到上镜标准，做演员该做的事。
+						</p>
+						<ul>
+							<li>
+								<img src="img/20.jpeg" alt="">
+							</li>
+							<li>
+								<img src="img/21.jpeg" alt="">
+							</li>
+						</ul>
+					</div>
+					<div class="bt-r">
+						<img src="img/9.jpeg" alt="">
+					</div>
+				</div>
+				<div class="box-bottom">
+					<ul>
+						<li>
+							<span>姓名：</span>
+							<p>某某某</p>
+							<button type="reset" class = "btn">修改</button>
+						</li>
+						<li>
+							<span>昵称：</span>
+							<p>杨紫小铁粉儿</p>
+							<button type="reset" class = "btn">修改</button>
+						</li>
+						<li>
+							<span>账号：</span>
+							<p>1479287586</p>
+							<button type="reset" class = "btn">修改</button>
+						</li>
+						<li>
+							<span>密码：</span>
+							<p>******</p>
+							<button type="reset" class = "btn">修改</button>
+						</li>
+						<li>
+							<span>邮箱：</span>
+							<p>88888888@qq.com</p>
+							<button type="reset" class = "btn">修改</button>
+						</li>
+					</ul>
+				</div>
+				<!-- 底部 -->
+				<div class="footer">
+					<p>版权所有： 紫米官方</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

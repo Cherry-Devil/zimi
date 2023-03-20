@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+   *{
+    margin: 0 auto;
+    padding: 0;
+   }
+   body{
+    background: #000000;
+   }
+   #box{
+    width: 600px;
+    height: 770px;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    border: 8px solid #FFFFFF;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 0;
+   }
+   #box ul{
+    padding: 0;
+    list-style-type: none;
+   }
+   #box #bnner li img{
+    position: absolute;
+    left: 0;
+    top: 0;
+   }
+   #box #number{
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+   }
+   #box #number li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #F90;
+    overflow: hidden;
+    font: 12px/20px arial;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 5px;
+    text-align: center;
+    opacity: 0.7;
+   }
+   #box #number li a{
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: bold;
+   }
+   #box #number .current{
+    background: #f60;
+    opacity: 1;
+   }
+  </style>
+  <script>
+   window.onload=function(){
+    //获取元素
+    var box=document.getElementById('box');
+    var bnner=document.getElementById('bnner');
+    var num=document.getElementById('number');
+    var aLi=bnner.getElementsByTagName('li');
+    var aNum=num.getElementsByTagName('li');
+    var index=n=0;
+    var timer=null;
+    //自动轮播实现方法
+    function autoPlay(){
+     //设置一个定时器,设置多少毫秒轮播下一张图片
+     timer=setInterval(function(){
+      index++;
+      index>=aLi.length&&(index=0);
+      show(index);
+     },1000)
+    }
+    autoPlay();
+    function show(a){
+     for(var i=0;i<aLi.length;i++)aLi[i].style.opacity=0;
+     aLi[a].style.opacity=1;
+     for(var j=0;j<aNum.length;j++)aNum[j].className="";
+     aNum[a].className="current";
+    }
+//    鼠标停在盒子内清除定时器
+    box.onmouseover=function(){
+     clearInterval(timer);
+    };
+    //鼠标移开盒子执行轮播方法
+    box.onmouseout=function(){
+     autoPlay();
+    };
+    for(var i=0;i<aNum.length;i++){
+     aNum[i].index=i;
+     aNum[i].onmouseover=function(){
+      show(this.index);
+      clearInterval(timer);
+     }
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <div id="box">
+   <ul id="bnner">
+    <li style="opacity: 1;"><img src="img/01.jpg" width="600" height="770"/></li>
+    <li style="opacity: 0;"><img src="img/02.jpg"/></li>
+    <li style="opacity: 0;"><img src="img/03.jpg"/></li>
+    <li style="opacity: 0;"><img src="img/04.jpg"/></li>
+    <li style="opacity: 0;"><img src="img/05.jpg"/></li>
+   </ul>
+   <ul id="number">
+    <li class="current"><a href="javascript:;">1</a></li>
+    <li class=""><a href="javascript:;">2</a></li>
+    <li class=""><a href="javascript:;">3</a></li>
+    <li class=""><a href="javascript:;">4</a></li>
+    <li class=""><a href="javascript:;">5</a></li>
+   </ul>
+  </div>
+ </body>
+</html>
